@@ -1,0 +1,146 @@
+
+/* Basic Settings */
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+body {
+    background-color: black;
+}
+header {
+    font-family: 'Ubuntu', sans-serif;
+}
+/**/
+.nav-link:target ~ .blob{
+    animation: move 8s ease-in-out infinite,
+               explode 2s;
+}
+/* Landing Page Text Area */
+
+.landing-upper {
+    color: white;
+    margin-top: 10%;
+    margin-left: 15%;
+    padding:0%;
+    font-size: 7em;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Type this line */
+.line{
+    border-right: 3.5px solid rgba(92, 187, 30);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(92, 187, 30);}
+    to{border-right-color: transparent;}
+}
+/* Hello */
+.landing-upper .typewriter:nth-child(1){
+    animation: type-1 1s steps(5) 1s 1 normal both,
+               blinkTextCursor 700ms steps(5) 0s normal;
+}
+@keyframes type-1{
+    from{width: 0;}
+    to{width: 3.4em;}
+    99.9% {
+        border-right: 3.5px solid rgba(92, 187, 30);
+    }
+    100% {
+        border-right: none;
+    }
+}
+/* I'm Ritvika */
+.landing-upper .typewriter:nth-child(2){
+    margin-top: -2%;
+    animation: type-2 2s steps(12) 1s 1 normal both,
+               blinkTextCursor 700ms steps(12) 6 normal both;
+    animation-delay: 2s;
+}
+@keyframes type-2{
+    from{width: 0;}
+    to{width: 6.25em;}
+    0% {
+        border-right: none;
+    }
+    1% {
+        border-right: 3.5px solid rgba(92, 187, 30);
+    }
+}
+/* Intro */
+.landing-lower {
+    color: rgb(212, 209, 209);
+    background-color: transparent;
+    margin-top: 3%;
+    margin-left: 15%;
+    padding:0%;
+    font-size: 1.25em;
+    font-family: 'Ubuntu', sans-serif;
+    width: 34em;
+    text-align: justify;
+    opacity: 0;
+    animation: glide .75s normal forwards;
+    animation-delay: 5s;
+}
+@keyframes glide{
+    100%{
+        opacity: 1;
+        transform: translateY(-1em);
+    }
+}
+
+.blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: rgba(92, 187, 30);
+    width: 50vmax;
+    z-index: -1;
+    animation: move 8s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+.blob-explode{
+    animation: move 8s ease-in-out infinite,
+               explode 3s;
+}
+  
+@keyframes move {
+    0%   { transform: scale(1)   translate(10px, -30px); }
+    38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+    40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+    78%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
+    80%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
+    100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+@keyframes explode {
+    0%   { transform: scale(1); }
+    10%  { transform: scale(1.5); }
+    20%  { transform: scale(3); }
+    30%  { transform: scale(4.5); }
+    40%  { transform: scale(6); }
+    50% { transform: scale(7.5); }
+    60% { transform: scale(8); }
+    70% { transform: scale(8.5); }
+    80% { transform: scale(9); }
+    90% { transform: scale(9.5); }
+    100% { transform: scale(10); }
+}
+
+/* Responsive */
+@media (max-width:770px) {
+    .landing-upper{
+        margin-top: 10%;
+        margin-left: 5%;
+        font-size: 3em;
+    }
+    .landing-lower{
+        margin-top: 10%;
+        margin-left: 5%;
+        font-size: 1em;
+        width: 20em;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="p-3 text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">    
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <a href="#" class="nav-link px-2 text-secondary" onclick="onClick(this.id)" id="about">About</a>
+            <a href="#" class="nav-link px-2 text-white" onclick="onClick(this.id)" id="education">Education</a>
+            <a href="#" class="nav-link px-2 text-white" onclick="onClick(this.id)" id="skills">Skills</a>
+            <a href="#" class="nav-link px-2 text-white" onclick="onClick(this.id)" id="projects">Projects</a>
+            <a href="#" class="nav-link px-2 text-white" onclick="onClick(this.id)" id="cert">Certifications</a>
+            <a href="#" class="nav-link px-2 text-white" onclick="onClick(this.id)" id="other">Other</a>
+            <div class="blob" id="iamblob">
+              <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
+              <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+              <path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z"/>
+              </svg>
+            </div>
+          </ul>
+        </div>
+      </div>
+  </header>
+
+  <div class="landing-upper">
+    <p class="line typewriter">HELLO.</p>
+    <p class="line typewriter">I'M RITVIKA.</p>
+  </div>
+  <div class="landing-lower">
+    <p>
+    An Electrical Engineer with a passion for technology. Also your average math and computer science nerd. I love learning and creating new things. Currently serving the software industry with research and innovation.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
