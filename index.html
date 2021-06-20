@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body onload="loader()">
   <header class="p-3">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">    
@@ -55,12 +55,27 @@
     </div>
 
     <div id="doodle">
-      <img src="assets/img/image.png">
+      <img src="assets/img/laptop.png">
     </div>
   </div>
   <script src="script.js"></script>
+  <script>
+    var myvar;
+    function loader() {
+      myvar = setTimeout(showPage, 2000);
+    }
+    
+    function showPage() {
+      document.getElementById("spinner-wrapper").style.display = "none";
+      document.getElementById("spinner").style.display = "none";
+    }
+    </script>
 </body>
-<footer style="height:5%; background-color: rgba(249, 225, 224, 0.1);">
+<!--CSS Spinner-->
+<div id="spinner-wrapper">
+  <div id="spinner"></div>
+</div>
+<footer style="background-color: rgba(249, 225, 224, 0.1);">
   <p style="justify-content: center; text-align:center; margin-bottom: 0; font-size: .8rem;">Hosted with ❤ by <a href="https://github.com">Github</a> </p>
   <p style="justify-content: center; text-align:center; margin-bottom: 0; font-size: .8rem;"><i class="far fa-copyright"></i> Ritvika Sonawane. <a href="https://github.com/alex-2410/resume">This website</a> is open source.</p>
 </footer>
