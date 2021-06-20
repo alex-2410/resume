@@ -7,17 +7,35 @@ html {
 }
 body {
     background-color: black;
+    overflow: hidden;
 }
 header {
     font-family: 'Ubuntu', sans-serif;
 }
-/**/
-.nav-link:target ~ .blob{
-    animation: move 8s ease-in-out infinite,
-               explode 2s;
+#wrapper {
+    width: 100%;
+    display: inline-flex;
+}
+.text-dark{
+    color: black;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    transform: scale(1.1);
+    color: white;
+}
+#about{
+    color: grey;
+}
+#about:hover{
+    transform: scale(1);
+}
+#wrapper{
+    margin-bottom: 80%;
 }
 /* Landing Page Text Area */
-
 .landing-upper {
     color: white;
     margin-top: 10%;
@@ -26,14 +44,12 @@ header {
     font-size: 7em;
     font-family: 'Roboto Slab', serif;
 }
-
 /* Type this line */
 .line{
     border-right: 3.5px solid rgba(92, 187, 30);
     overflow: hidden;
     white-space: nowrap;
 }
-
 @keyframes blinkTextCursor{
     from{border-right-color: rgba(92, 187, 30);}
     to{border-right-color: transparent;}
@@ -92,8 +108,15 @@ header {
     }
 }
 
+/* Blob */
+.container{
+    position: relative;
+}
 .blob {
     position: absolute;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     top: 0;
     left: 0;
     fill: rgba(92, 187, 30);
@@ -106,13 +129,12 @@ header {
     animation: move 8s ease-in-out infinite,
                explode 3s;
 }
-  
 @keyframes move {
     0%   { transform: scale(1)   translate(10px, -30px); }
-    38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-    40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-    78%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
-    80%  { transform: scale(1.5) translate(0vw, 50vh) rotate(-20deg); }
+    38%  { transform: scale(0.8, 1) translate(100%, 30%) rotate(160deg); }
+    40%  { transform: scale(0.8, 1) translate(100%, 30%) rotate(160deg); }
+    78%  { transform: scale(1.5) translate(0%, 48%) rotate(-20deg); }
+    80%  { transform: scale(1.5) translate(0%, 48%) rotate(-20deg); }
     100% { transform: scale(1)   translate(10px, -30px); }
 }
 
@@ -122,15 +144,41 @@ header {
     20%  { transform: scale(3); }
     30%  { transform: scale(4.5); }
     40%  { transform: scale(6); }
-    50% { transform: scale(7.5); }
-    60% { transform: scale(8); }
-    70% { transform: scale(8.5); }
-    80% { transform: scale(9); }
-    90% { transform: scale(9.5); }
+    50%  { transform: scale(7.5); }
+    60%  { transform: scale(8); }
+    70%  { transform: scale(8.5); }
+    80%  { transform: scale(9); }
+    90%  { transform: scale(9.5); }
     100% { transform: scale(10); }
 }
+#doodle {
+    margin-top: 10%;
+    margin-left: 5%;
+    animation: dangle 0.8s infinite;
+}
+@keyframes dangle {
+    0% {transform: rotate(10deg);}
+    49.9%{transform: rotate(10deg);}
+    50% {transform: rotate(20deg);}
+    99.9%{transform: rotate(20deg);}
+    100%{transform: rotate(10deg);} 
+}
 
+/* Footer */
+footer{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.85em;
+    width:100%;
+    position: fixed;
+    bottom: 0;
+  }
 /* Responsive */
+@media(min-width:1200px) {
+    #landing {
+        width:50%;
+    }
+}
 @media (max-width:770px) {
     .landing-upper{
         margin-top: 10%;
@@ -142,5 +190,8 @@ header {
         margin-left: 5%;
         font-size: 1em;
         width: 20em;
+    }
+    #doodle{
+        display: none;
     }
 }

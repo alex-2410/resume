@@ -1,0 +1,14 @@
+
+/* Basic Settings */
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+body {
+    color: white;
+    background-color: black;
+}
+header {
+    font-family: 'Ubuntu', sans-serif;
+}
