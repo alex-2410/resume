@@ -1,3 +1,15 @@
+//Loader
+var myvar;
+function loader() {
+    myvar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+    document.getElementById("spinner-wrapper").style.display = "none";
+    document.getElementById("spinner").style.display = "none";
+}
+
+//Blob explode
 function onClick(clicked_id){
     var elements = document.getElementsByClassName('p-dark');
     var nav_elements = document.getElementsByClassName('nav-link');
