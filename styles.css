@@ -1,3 +1,8 @@
+:root {
+    --slime: rgba(92, 187, 30);
+    --footer-grey: rgba(249, 225, 224, 0.1);
+    --landing-lower: rgb(241, 241, 241);
+}
 
 /* Basic Settings */
 
@@ -6,52 +11,50 @@ html {
     overflow: hidden;
 }
 body {
+    color: white;
     background-color: black;
     overflow: hidden;
+
 }
-header {
-    font-family: 'Ubuntu', sans-serif;
-}
+
 #wrapper {
     width: 100%;
     display: inline-flex;
+    margin-bottom: 80%;
 }
-.text-dark{
-    color: black;
-}
+
+/* Navbar */
 .nav-link{
+    font-family: 'Ubuntu', sans-serif;
     color: white;
 }
 .nav-link:hover{
     transform: scale(1.1);
-    color: white;
 }
-#about{
+.nav-link:nth-child(1){
     color: grey;
 }
-#about:hover{
+.nav-link:nth-child(1):hover{
     transform: scale(1);
+    cursor: default;
 }
-#wrapper{
-    margin-bottom: 80%;
-}
+
 /* Landing Page Text Area */
 .landing-upper {
-    color: white;
     margin-top: 10%;
     margin-left: 15%;
-    padding:0%;
+    padding: 0%;
     font-size: 7em;
     font-family: 'Roboto Slab', serif;
 }
 /* Type this line */
 .line{
-    border-right: 3.5px solid rgba(92, 187, 30);
+    border-right: 3.5px solid var(--slime);
     overflow: hidden;
     white-space: nowrap;
 }
 @keyframes blinkTextCursor{
-    from{border-right-color: rgba(92, 187, 30);}
+    from{border-right-color: var(--slime);}
     to{border-right-color: transparent;}
 }
 /* Hello */
@@ -64,7 +67,7 @@ header {
     from{width: 0;}
     to{width: 3.4em;}
     99.9% {
-        border-right: 3.5px solid rgba(92, 187, 30);
+        border-right: 3.5px solid var(--slime);
     }
     100% {
         border-right: none;
@@ -84,16 +87,16 @@ header {
         border-right: none;
     }
     1% {
-        border-right: 3.5px solid rgba(92, 187, 30);
+        border-right: 3.5px solid var(--slime);
     }
 }
+
 /* Intro */
 .landing-lower {
-    color: rgb(212, 209, 209);
-    background-color: transparent;
+    color: var(--landing-lower);
     margin-top: 3%;
     margin-left: 15%;
-    padding:0%;
+    padding: 0%;
     font-size: 1.25em;
     font-family: 'Ubuntu', sans-serif;
     width: 34em;
@@ -116,11 +119,9 @@ header {
 .blob {
     position: absolute;
     overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
     top: 0;
     left: 0;
-    fill: rgba(92, 187, 30);
+    fill: var(--slime);
     width: 50vmax;
     z-index: -1;
     animation: move 8s ease-in-out infinite;
@@ -138,7 +139,6 @@ header {
     80%  { transform: scale(1.5) translate(0%, 48%) rotate(-20deg); }
     100% { transform: scale(1.2)   translate(1px, -3px); }
 }
-
 @keyframes explode {
     0%   { transform: scale(1); }
     10%  { transform: scale(1.5); }
@@ -152,6 +152,11 @@ header {
     90%  { transform: scale(9.5); }
     100% { transform: scale(10); }
 }
+.text-dark{ /*Utility for changing text color to black when blob explodes */
+    color: black;
+}
+
+/* Doodle */
 #doodle {
     margin-top: 5%;
     margin-left: 17%;
@@ -163,17 +168,6 @@ header {
     50% {transform: rotate(20deg);}
     99.9%{transform: rotate(20deg);}
     100%{transform: rotate(10deg);} 
-}
-
-/* Footer */
-footer{
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 0.85em;
-    width:100%;
-    position: fixed;
-    bottom: 0;
-    height: 40px;
 }
 
 /* Loader */
@@ -195,21 +189,19 @@ footer{
 #spinner {
     width: 40px;
     height: 40px;
-    background-color: rgba(92, 187, 30);
+    background-color: var(--slime);
     position: absolute;
     top: 48%;
     left: 48%;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
-  
-  @-webkit-keyframes sk-rotateplane {
+@-webkit-keyframes sk-rotateplane {
     0% { -webkit-transform: perspective(120px) }
     50% { -webkit-transform: perspective(120px) rotateY(180deg) }
     100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-  }
-  
-  @keyframes sk-rotateplane {
+}
+@keyframes sk-rotateplane {
     0% { 
       transform: perspective(120px) rotateX(0deg) rotateY(0deg);
       -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
@@ -220,7 +212,33 @@ footer{
       transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
       -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
-  }
+}
+
+/* Footer */
+footer{
+    position: fixed;
+    background-color: var(--footer-grey);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.85em;
+    height: 40px;
+    width:100%;
+    bottom: 0;
+}
+footer p{
+    justify-content: center;
+    text-align:center;
+    margin-bottom: 0;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:grey;
+    text-decoration: underline;
+}
+
+
 
 /* Responsive */
 @media(max-width:1200px) {
