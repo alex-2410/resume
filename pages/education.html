@@ -7,10 +7,35 @@
 
     <title>Education</title>
 
-    <link href="css/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <link href="../css/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/education.css" rel="stylesheet">
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    Education
+    <header class="p-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <a href="#" class="nav-link px-2" onclick="onClick(this.id)" id="index">About</a>
+                <a href="#" class="nav-link px-2">Education</a>
+                <a href="#" class="nav-link px-2" onclick="onClick(this.id)" id="skills">Skills</a>
+                <a href="#" class="nav-link px-2" onclick="onClick(this.id)" id="projects">Projects</a>
+                <a href="#" class="nav-link px-2" onclick="onClick(this.id)" id="cert">Certifications</a>
+                <a href="#" class="nav-link px-2" onclick="onClick(this.id)" id="other">Other</a>
+            </ul>
+            </div>
+        </div>
+    </header>
+    <script src="../js/education.js"></script>
 </body>
 </html>
