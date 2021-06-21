@@ -1,0 +1,35 @@
+:root {
+    --slime: rgba(92, 187, 30);
+    --footer-grey: rgba(249, 225, 224, 0.1);
+    --landing-lower: rgb(241, 241, 241);
+}
+
+/* Basic Settings */
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+body {
+    color: white;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+/* Navbar */
+.nav-link{
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.nav-link:hover{
+    color: white;
+    transform: scale(1.1);
+}
+.nav-link:nth-child(3){
+    color: grey;
+}
+.nav-link:nth-child(3):hover{
+    transform: scale(1);
+    cursor: default;
+}
