@@ -161,7 +161,7 @@ body {
 #doodle {
     margin-top: 5%;
     margin-left: 17%;
-    /*animation: dangle 0.8s infinite;*/
+    /*animation: dangle 0.7s infinite;*/
 }
 @keyframes dangle {
     0% {transform: rotate(10deg);}
